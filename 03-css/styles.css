@@ -1,1 +1,257 @@
-/* Add your CSS code here  */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap");
+
+:root {
+  --ice-blue-juvie: #8fbcd4;
+  --gothic-gray-blue: #6f8796;
+  --dark-slate-infinity: #1f2a33;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+/* books page */
+
+nav {
+  background-color: var(--dark-slate-infinity);
+  padding: 12px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav ul li a {
+  font-family: "Cinzel", serif;
+  font-variant: small-caps;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--ice-blue-juvie);
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: var(--ice-blue-juvie);
+  color: var(--dark-slate-infinity);
+}
+
+#books h1 {
+  font-family: "Cinzel", serif;
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--gothic-gray-blue);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+#books h2,
+#covers h2,
+#table h2 {
+  font-family: "Cinzel", serif;
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 16px;
+}
+
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+section {
+  margin-bottom: 44px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 28px;
+  line-height: 1.9;
+}
+
+ol {
+  padding-left: 28px;
+  line-height: 1.9;
+}
+
+figure {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+img {
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+figure img:hover {
+  transform: scale(1.1) translateY(-2px);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+th {
+  background-color: #ececec;
+  font-weight: 600;
+  padding: 10px 8px;
+  text-align: center;
+  border: 1px solid #bbbbbb7d;
+}
+
+td {
+  padding: 9px 8px;
+  text-align: center;
+  border: 1px solid #bbbbbb7d;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ececec;
+}
+
+tbody tr:last-child td {
+  background-color: #ececec;
+}
+
+/* form page */
+
+body:not(:has(nav)) {
+  background-color: #070b2b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body:not(:has(nav)) main {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px 30px;
+  width: 100%;
+  max-width: 450px;
+}
+
+body:not(:has(nav)) h1 {
+  font-family: Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #161678;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+label {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #303030;
+}
+
+form > div {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+fieldset {
+  border: none;
+  padding: 1px;
+  margin: 1px;
+}
+
+fieldset legend {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+fieldset label {
+  font-size: 0.9rem;
+  color: #303030;
+}
+
+fieldset input[type="radio"] {
+  accent-color: #707071;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+form > div:last-child {
+  display: grid;
+  gap: 16px;
+  margin-top: 50px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #c8cfe0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  background-color: #161678;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+input[type="reset"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+
+body:not(:has(nav)) p {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  line-height: 1.1;
+}
+
+body:not(:has(nav)) p a {
+  color: #161678;
+}
