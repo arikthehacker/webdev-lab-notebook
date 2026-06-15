@@ -7,16 +7,13 @@ const port = process.env.PORT || 5002;
 const file = new static.Server('./exercise');
 
 const server = http.createServer((req, res) => {
-  // main route
   if (req.method === 'GET' && req.url === '/') {
     file.serveFile('/welcome.html', 200, {}, req, res);
   }
-  // form route
-  else if (req.method === 'GET' && req.url === '') {
-    // fill out this route
+  else if (req.method === 'GET' && req.url === '/form') {
+    file.serveFile('/form.html', 200, {}, req, res);
   }
-  // form submission
-  else if (req.method === 'POST' && req.url === '') {
+  else if (req.method === 'POST' && req.url === '/formExerciseSubmit') {
     let body = '';
 
     req.on('data', (chunk) => {
